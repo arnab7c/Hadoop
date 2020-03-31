@@ -17,7 +17,7 @@ class Customer {
   
   def customerOperation{
     // read data from file & store as list
-    	val customerInfo=Source.fromFile(f_name).getLines.toList	
+    	val customerInfo=Source.fromFile(f_name).getLines.toList
     	
  // get list of distinct States from where Customer came
     	// split file , separator and take data where 7th position is not null
