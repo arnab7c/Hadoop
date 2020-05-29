@@ -50,7 +50,7 @@ object Rational {
 
 	val fifth = new Rational(1,5) // if new is provided, it refers auxiliary constructors
 	val five = new Rational(5) // it can still access though the companion class is private
-	val six = Rational(6)
+	val six = Rational(6) // calls implicit definition of apply(i:Int)
 	val half = Rational(1,2) // no need for new for companion object reference
 	
 	/*
