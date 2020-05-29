@@ -39,7 +39,7 @@ object ValuesVariableType extends App{
    println(f"$name%s can run at ${speed + 3}%2.2f m/sec")
    println(raw"$name%s can run at ${speed + 3}%2.2f m/sec")
    
-   val num=10000
+   val num=11
    
 // Factorial function - highly inadvisable
    def Factorial(n:Int):BigInt = {
@@ -70,7 +70,7 @@ object ValuesVariableType extends App{
  // Factorial - with tail recursion (best way to implement loop in scala, functional programming)
     def TailFactorial(n:Int,r:BigInt=1):BigInt ={
       @tailrec
-      def InnerFactorial(n:Int,r:BigInt=1):BigInt= {
+       def InnerFactorial(n:Int,r:BigInt=1):BigInt= { 	// nested method
         if (n==1) r
         else InnerFactorial(n-1,n*r)
       }
@@ -79,16 +79,16 @@ object ValuesVariableType extends App{
     
     println(s"Factorial of ${num} using tail recursion "+TailFactorial(num))
     
-  // Prime - with tail recursion
+  // Prime - with tail recursion (with private method)
     def isPrime(n:Int):Boolean = {
-      @tailrec
-      def isPrimeTail(t:Int,isStillPrime:Boolean):Boolean = 
-        if (!isStillPrime) false
-        else if (t <= 1 ) true
-        else isPrimeTail(t -1, n % t != 0 && isStillPrime)
-        
-      isPrimeTail (n /2, true)
+      isPrimeTail (n,n /2, true)
     }
     
-    println("Number 2737 is prime ? " +isPrime(2737))
+    @tailrec
+     private def isPrimeTail(n:Int, t:Int,isStillPrime:Boolean):Boolean = { //private method
+        if (!isStillPrime) false
+        else if (t <= 1 ) true
+        else isPrimeTail(n, t - 1, n % t != 0 && isStillPrime)
+}
+    println(s"Number ${num} is prime ? " +isPrime(num))
 }
