@@ -1,7 +1,7 @@
 /**
  * Basic val & var
  * Call by name & call by value
- * Intepolator
+ * String Interpolation
  * Factorial with loop, recursion & tailrecursion
  * Prime with tail recursion
  */
@@ -33,7 +33,7 @@ object ValuesVariableType extends App{
    CallByValue(System.nanoTime()) 
    CallByName(System.nanoTime()) 
     
-// F-intepolator  & Raw intepolator 
+// F-interpolator  & Raw interpolator 
    val name = "Arnab"
    val speed = 5.5573f
    println(f"$name%s can run at ${speed + 3}%2.2f m/sec")
