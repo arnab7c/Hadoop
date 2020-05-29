@@ -21,9 +21,10 @@ class Rational private ( val n:Int, val d:Int ){ // "to make class private - use
   )
   
   // Auxiliary constructors are quite limited, they can only call another constructor
-  // Better alternative is to use "factory methods" - what is this?
+  // Better alternative is to use "factory methods" (*1*)
   
-  def this(i:Int) = this(i,1) // Auxiliary Constructor
+  def this(i:Int) = this(i,1) // Auxiliary Constructor 
+  
   def +(i:Int): Rational = this + Rational(i) // overloading 
   // if implicit definition is available, + overloading isn't required
   // Rational(1,5) + 5  => Rational(1,5) + Rational(5) -> normal + [infix overriding will solve the problem]
@@ -35,7 +36,7 @@ object Rational {
    * An object in the same source file with the same name as the class (or trait) - companion object
    * Shares private state and behavior with the class (and vice versa)
    * Scala's alternative to static method
-   * Factory methods and private constructors are idiomatic
+   * Factory methods and private constructors are idiomatic (*1*)
    */
 	def main(args: Array[String]): Unit = {}
 	
