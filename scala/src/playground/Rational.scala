@@ -1,12 +1,11 @@
 /**
- *
+ * Class Definition with private class
+ * require definition
+ * Method overriding, Method overloading, infix overriding
+ * Auxiliary constructor, Companion Object
+ * Implicit Conversion
  */
 package playground
-
-/**
- * @author arnab
- *
- */
 
 // class Rational (val l:Int, val d:Int) // no body, completely valid
 
