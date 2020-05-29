@@ -1,5 +1,9 @@
 /**
- *
+ * Basic val & var
+ * Call by name & call by value
+ * Intepolator
+ * Factorial with loop, recursion & tailrecursion
+ * Prime with tail recursion
  */
 package playground
 import scala.annotation.tailrec
@@ -30,7 +34,6 @@ object ValuesVariableType extends App{
    CallByName(System.nanoTime()) 
     
 // F-intepolator  & Raw intepolator 
-   println("F-intepolator example.")
    val name = "Arnab"
    val speed = 5.5573f
    println(f"$name%s can run at ${speed + 3}%2.2f m/sec")
