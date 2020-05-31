@@ -68,7 +68,7 @@ object ValuesVariableType extends App{
     }
  
  // Factorial - with tail recursion (best way to implement loop in scala, functional programming)
-    def TailFactorial(n:Int,r:BigInt=1):BigInt ={
+    def TailFactorial(n:Int,r:BigInt=1):BigInt = {
       @tailrec
        def InnerFactorial(n:Int,r:BigInt=1):BigInt= { 	// nested method
         if (n==1) r
